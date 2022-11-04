@@ -4,14 +4,23 @@ import Square from "./components/Square";
 
 function App() {
   const [colorValue, setColorValue] = useState('')
+  const [hexValue, setHexValue] = useState('')
+  const [isLightText, setIsLightText] = useState(true)
 
   return (
     <div className="wrapper">
       <Input
         colorValue={colorValue}
         setColorValue={setColorValue}
+        setHexValue={setHexValue}
+        isLightText={isLightText}
+        setIsLightText={setIsLightText}
       />
-      <Square colorValue={colorValue} />
+      <Square
+        colorValue={colorValue}
+        hexValue={hexValue}
+        isLightText={isLightText}
+      />
     </div>
   );
 }
