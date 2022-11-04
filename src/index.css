@@ -1,13 +1,87 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  min-height: 100vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  background-image: url('./assets/bg_elephants-2_4030.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 15rem;
+  height: 30rem;
+  box-shadow: hsla(0, 0%, 0%, 0.25) 0px 13px 27px -5px, hsla(0, 0%, 0%, 0.3) 0px 8px 16px -8px;
+  border-radius: .75rem;
+  border: none;
+  display: grid;
+  place-content: center;
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+
+@media (min-width: 25rem) {
+  .square {
+    width: 40rem;
+  }
+}
+
+.square p {
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+form {
+  width: 15rem;
+}
+
+@media (min-width: 25rem) {
+  form {
+    width: 40rem;
+  }
+}
+
+label {
+  position: absolute;
+  left: -999999rem;
+}
+
+input {
+  opacity: 80%;
+}
+
+input:focus {
+  opacity: 100%;
+  outline: none !important;
+}
+
+input[type="text"] {
+  padding: 1rem 0 1rem 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: .75rem;
+  border: none;
+  outline: none;
+}
+
+input[placeholder] {
+  font-size: 1rem;
+  text-align: center;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
